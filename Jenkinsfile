@@ -33,11 +33,7 @@ stage('SonarQube Analysis') {
         }
   }
 
-  post {
-    failure {
-      echo 'Qualité non atteinte – pipeline aborted.'
-    }
-  }
+ 
 
      
     
