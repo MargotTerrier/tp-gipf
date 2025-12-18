@@ -46,3 +46,4 @@ stage('Run Test'){
             archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
         }
 }
+}
