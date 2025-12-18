@@ -18,7 +18,7 @@ stage('Build') {
 stage('SonarQube Analysis') {
     steps {
       sh '''
-./gradlew sonar \
+./gradlew -Dhttps.proxyHost="proxy1-rech" -Dhttps.proxyPort=3128 sonar \
   -Dsonar.projectKey=tp_controle2 \
   -Dsonar.projectName='tp_controle2' \
   -Dsonar.host.url=http://172.17.0.1:9000 \
