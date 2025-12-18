@@ -18,7 +18,7 @@ stages {
   
 stage('Build') {
     steps {
-      sh './gradlew compile -Dhttps.proxyHost="proxy1-rech" -Dhttps.proxyPort=3128'
+      sh './gradlew compile Java -Dhttps.proxyHost="proxy1-rech" -Dhttps.proxyPort=3128'
     }
   }
 stage('SonarQube Analysis') {
