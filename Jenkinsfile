@@ -2,12 +2,6 @@ pipeline {
 
 agent any
 
-  
-environment {
-  SONAR_HOST_URL = 'http://localhost:9000'
-  SONAR_TOKEN = 'sqp_e4a900f46f5985dcf3756a89a00e177fbc545cd6'
- }
-
 stages {
   stage('Checkout') {
     steps {
@@ -27,7 +21,7 @@ stage('SonarQube Analysis') {
 ./gradlew sonar \
   -Dsonar.projectKey=tp_controle2 \
   -Dsonar.projectName='tp_controle2' \
-  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.host.url=http://172.17.0.1:9000 \
   -Dsonar.token=sqp_e4a900f46f5985dcf3756a89a00e177fbc545cd6
 '''
         }
