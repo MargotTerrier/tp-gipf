@@ -27,7 +27,7 @@ stage('SonarQube Analysis') {
 ./gradlew sonar \
   -Dsonar.projectKey=tp_controle \
   -Dsonar.projectName='tp_controle' \
-  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.host.url=http://172.17.0.1:9000 \
   -Dsonar.token=sqp_f6cbff718097d55ab8cb88c44d764b603eb6c5f2
 '''
         }
