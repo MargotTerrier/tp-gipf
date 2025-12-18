@@ -12,7 +12,7 @@ stages {
     checkout scm
     }
   }
-}
+
 
   
 stage('Build') {
@@ -20,7 +20,7 @@ stage('Build') {
       sh './gradlew build -Dhttps.proxyHost="proxy1-rech" -Dhttps.proxyPort=3128 -x test'
     }
   }
-  
+}
       
     
   
