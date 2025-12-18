@@ -43,7 +43,6 @@ stage('Run Test'){
 }
   post {
         always {
-            archiveArtifacts artifacts: '	gipf.jar', onlyIfSuccessful: true
+            archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
         }
-    }
 }
