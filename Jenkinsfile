@@ -33,6 +33,11 @@ stage('Run Test'){
     }
 }
 
+  stage('Jar'){
+  steps {
+      sh './gradlew -Dhttps.proxyHost="proxy1-rech" -Dhttps.proxyPort=3128 jar' 
+    }
+}
  
 
      
