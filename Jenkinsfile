@@ -35,16 +35,15 @@ stage('Run Test'){
 
   stage('Jar'){
   steps {
-      sh './gradlew -Dhttps.proxyHost="proxy1-rech" -Dhttps.proxyPort=3128 jar' 
+      sh './gradlew -Dhttps.proxyHost="proxy1-rech" -Dhttps.proxyPort=3128 jar > gipf.jar'
     }
 }
  
 
-     
-    
-  
-
-
-  
 }
+  post {
+        always {
+            archiveArtifacts artifacts: '	gipf.jar', onlyIfSuccessful: true
+        }
+    }
 }
