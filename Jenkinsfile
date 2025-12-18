@@ -5,7 +5,7 @@ agent any
   
 environment {
   SONAR_HOST_URL = 'http://localhost:9000'
-  SONAR_TOKEN = 'sqp_f6cbff718097d55ab8cb88c44d764b603eb6c5f2'
+  SONAR_TOKEN = 'sqp_e4a900f46f5985dcf3756a89a00e177fbc545cd6'
  }
 
 stages {
@@ -25,10 +25,10 @@ stage('SonarQube Analysis') {
     steps {
       sh '''
 ./gradlew sonar \
-  -Dsonar.projectKey=tp_controle \
-  -Dsonar.projectName='tp_controle' \
-  -Dsonar.host.url=http://172.17.0.1:9000 \
-  -Dsonar.token=sqp_f6cbff718097d55ab8cb88c44d764b603eb6c5f2
+  -Dsonar.projectKey=tp_controle2 \
+  -Dsonar.projectName='tp_controle2' \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.token=sqp_e4a900f46f5985dcf3756a89a00e177fbc545cd6
 '''
         }
   }
