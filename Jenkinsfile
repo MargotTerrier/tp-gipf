@@ -2,9 +2,6 @@ pipeline {
 
 agent any
 
-plugins {
-  id "org.sonarqube" version "7.2.0.6526"
-}
   
 environment {
   SONAR_HOST_URL = 'http://localhost:9000'
