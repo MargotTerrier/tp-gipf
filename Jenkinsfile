@@ -12,6 +12,7 @@ stages {
     checkout scm
     }
   }
+}
 
   
 stage('Build') {
